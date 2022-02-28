@@ -73,16 +73,27 @@ body{
     left:41%;
 }
 
+.advice__dice:after{
+    content: "";
+    position: absolute;
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    z-index: 0;
+    box-shadow: 0 0 25px var(--neon-green);
+    opacity: 0;
+    transition: opacity 750ms;
+}
 
+.advice__dice:hover:after{
+    opacity: 1;
+}
 .advice__dice-image{
     width:37%;
     height:37%;
 }
 
-.advice__dice:hover{
-    cursor: pointer;
-    box-shadow: 0 0 25px var(--neon-green);
-}
+
 .flex-center{
     display: flex;
     justify-content: center;
