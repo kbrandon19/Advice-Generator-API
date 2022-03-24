@@ -12,7 +12,6 @@ function adviceSlip() {
     })
 
     .then(data => {
-
       /* created variables to store the data from the api */
       let slipId = data.slip.id;
       let slipAdvice = data.slip.advice;
@@ -27,9 +26,9 @@ function adviceSlip() {
     })
 
   //error text is thrown if the data fetched cannot be retrieved
+  .catch(err => alert("Something not good happened"));
 };
 
-// window.addEventListener('load', adviceSlip);
 window.onload = adviceSlip();
 
 displayChangeBtn.addEventListener('click', () => {

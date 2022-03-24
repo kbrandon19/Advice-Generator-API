@@ -26,8 +26,8 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [](https://kbrandon19.github.io/Advice-Generator-API/)
+- [Solution URL](https://your-solution-url.com)
+-  [Live Site URL](https://kbrandon19.github.io/Advice-Generator-API/)
 
 ## My process
 
