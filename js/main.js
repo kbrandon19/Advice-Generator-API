@@ -1,30 +1,37 @@
+let displayId = document.getElementById('advice__id_text');
+let displayQuote = document.getElementById('advice__quote_text');
+let displayChangeBtn = document.getElementById('advice__dice');
+
 function adviceSlip() {
 
   var url = `https://api.adviceslip.com/advice`;
 
   fetch(url)
-    .then((response) => {
+    .then(response => {
       return response.json();
     })
 
-    .then((data) => {
+    .then(data => {
 
-      let displayID = document.getElementsByClassName('advice__id');
-      let displayText = document.getElementsByClassName('advice__quote');
- 
       /* created variables to store the data from the api */
-      let slipId = data["slip"]["id"];
-      let advice = data["slip"]["advice"];
+      let slipId = data.slip.id;
+      let slipAdvice = data.slip.advice;
 
       console.log(slipId);
-      console.log(advice);
+      console.log(slipAdvice);
 
-      displayID.innerHTML = `Advice ID #${slipId}`;
-      displayText.innerHTML = advice;
+      displayId.textContent = `Advice #${slipId}`;
+      displayQuote.textContent = `${slipAdvice}`;
 
-    });
+
+    })
 
   //error text is thrown if the data fetched cannot be retrieved
 };
 
-window.addEventListener('onload', adviceSlip());
+// window.addEventListener('load', adviceSlip);
+window.onload = adviceSlip();
+
+displayChangeBtn.addEventListener('click', () => {
+        adviceSlip()
+    })

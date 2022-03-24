@@ -43,14 +43,14 @@ body{
     width:100%;
     
 }
-.advice__text{
+.advice__id_text{
     text-transform: uppercase;
     color:var(--neon-green);
     font-size: 10px;
     letter-spacing: 3px;
 }
 
-.advice__quote{
+.advice__quote_text{
     width: 100%;
     height:auto;
     color:var(--light-cyan);
@@ -87,13 +87,16 @@ body{
 
 .advice__dice:hover:after{
     opacity: 1;
+    cursor: pointer;
 }
 .advice__dice-image{
     width:37%;
     height:37%;
 }
 
-
+.advice__dice-image:hover{
+    cursor: pointer;
+}
 .flex-center{
     display: flex;
     justify-content: center;
